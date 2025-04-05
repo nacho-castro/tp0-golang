@@ -48,15 +48,15 @@ func GenerarYEnviarPaquete() {
 	paquete := Paquete{}
 	// Leemos y cargamos el paquete
 	for {
+		//Lectura
 		leido := LeerConsola()
 		leido = strings.TrimSpace(leido)
 
 		if leido == "" {
 			break
 		}
-
+		//Carga
 		paquete.Valores = append(paquete.Valores, leido)
-
 	}
 	log.Printf("paqute a enviar: %+v", paquete)
 	// Enviamos el paqute
